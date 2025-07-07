@@ -4,148 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Naruto Uzumaki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      font-family: 'Georgia', serif;
-      background: url('/pages/page1/assets/img/Konohagakure.avif') no-repeat center center fixed;
+      font-family: Georgia, serif;
+      background: linear-gradient(to bottom, #ffedcc, #ffd699);
+      background-image: url('/pages/page1/assets/img/village.png');
       background-size: cover;
+      background-attachment: fixed;
+      color: #2c1c00;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
-    .grid-container {
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: -1;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       align-items: center;
-      background-color: #1c1c1c;
       padding: 10px 20px;
-      font-family: Arial, sans-serif;
-      gap: 10px;
       position: sticky;
       top: 0;
-      z-index: 100;
-      flex-wrap: nowrap;
-      overflow-x: auto;
+      z-index: 1000;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+      border-radius: 0 0 10px 10px;
     }
 
-    .logo img {
+    .navbar img {
       height: 60px;
-      margin-right: 0;
+      margin-right: 20px;
     }
 
-    .grid-item {
-      padding: 10px 15px;
-      color: white;
-      background-color: #333;
-      border: 1px solid #444;
+    .nav-link {
+      color: #fff;
       text-decoration: none;
+      margin-right: 20px;
       font-weight: bold;
-      white-space: nowrap;
+      transition: color 0.3s ease;
     }
 
-    .grid-item:hover {
-      background-color: #ff4757;
+    .nav-link:hover {
+      color: #ffcc00;
     }
 
-    header {
-      font-family: Arial, sans-serif;
-      background-color: #f38c02;
-      color: #0b0b0b;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    section {
+    main {
       flex: 1;
-      max-width: 850px;
-      margin: 50px auto;
-      background: url('https://cdn.pixabay.com/photo/2014/12/21/23/28/parchment-575231_1280.png') center no-repeat;
-      background-size: contain;
-      background-color: #fff8e1;
-      padding: 60px 40px;
-      border: 6px solid #d29e54;
-      box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 5vw;
     }
 
-    section h2 {
+    .hero {
       text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 25px;
-      color: #bf3f0d;
-    }
-
-    .resume-image {
-      display: block;
-      margin: 0 auto 30px;
-      width: 280px;
-      height: auto;
-      border: 5px solid #000;
-      border-radius: 6px;
-      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+      padding: 60px 20px 40px;
       background-color: white;
+      background-image: url('/pages/page1/assets/img/hokage-writing.jpg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: contain;
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
     }
 
-    section p {
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px black;
+      color: #ffcc00;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #000000;
+      max-width: 700px;
+      text-shadow: 0 0 10px white;
+      margin: auto;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .content h2 {
+      grid-column: span 2;
+      font-size: 2rem;
+      color: #d35400;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      line-height: 1.7;
       font-size: 1.1rem;
-      margin-bottom: 12px;
     }
 
-    section p strong {
-      color: #b45309;
+    .naruto-image {
+      grid-column: span 2;
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
+      transition: transform 0.3s ease;
     }
 
-    .quote {
-      font-style: italic;
-      margin-top: 25px;
-      font-size: 1.1rem;
-      color: #d2691e;
-      border-left: 4px solid #f38c02;
-      padding-left: 15px;
+    .naruto-image:hover {
+      transform: scale(1.05);
     }
 
     footer {
-      font-family: Arial, sans-serif;
-      background-color: #1c1c1c;
+      margin-top: auto;
+      background: #1c1c1c;
       color: #ccc;
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
-      margin-top: auto;
     }
   </style>
 </head>
 <body>
 
-  <div class="grid-container">
-    <a href="/pages/index.html" class="logo">
-      <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
-    </a>
-    <a class="grid-item" href="/pages/index.html">Home</a>
-    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
-    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
-    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
-    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
-    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  <div class="navbar">
+    <img src="/pages/img/Truehero.png" alt="Logo" />
+    <a class="nav-link" href="/pages/index.html">Home</a>
+    <a class="nav-link" href="/pages/page1/index.html">Naruto</a>
+    <a class="nav-link" href="/pages/page2/index.html">Luffy</a>
+    <a class="nav-link" href="/pages/page3/index.html">Goku</a>
+    <a class="nav-link" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="nav-link" href="/pages/page5/index.html">Deku</a>
   </div>
 
-  <header>
-    Chunin Application – Naruto Uzumaki
-  </header>
+  <main>
+    <div class="hero">
+      <h1>Naruto Uzumaki</h1>
+      <p>The boy who started with nothing but a dream—and became the greatest Hokage the Leaf Village ever knew.</p>
+    </div>
 
-  <section>
-    <h2>Ninja Resume: Naruto Uzumaki</h2>
-    <img src="/pages/page1/assets/img/narutoclown.png" alt="Naruto Uzumaki" class="resume-image">
-    <p><strong>Name:</strong> Naruto Uzumaki</p>
-    <p><strong>Rank:</strong> Genin (Later Hokage)</p>
-    <p><strong>Affiliation:</strong> Konohagakure</p>
-    <p><strong>Skills:</strong> Rasengan, Shadow Clone Jutsu, Sage Mode, Kurama Chakra Mode</p>
-    <p class="quote">"I'm not gonna run away, I never go back on my word! That's my nindō – my ninja way!"</p>
-  </section>
+    <div class="content">
+      <h2>From Outcast to Hokage</h2>
+      <p>Naruto grew up alone, shunned by his village for the beast sealed inside him. But he never gave up. Through sheer will, he proved himself to the world, forging unbreakable bonds and protecting those dear to him.</p>
+
+      <img src="/pages/page1/assets/img/aruto-modo-kurama-png-naruto-hokage-bijuu-mode-11562875018j0lvwkfwnn-removebg-preview.png" alt="Naruto in Kurama Mode" class="naruto-image">
+
+      <h2>Power and Purpose</h2>
+      <p>With signature techniques like the Rasengan and Shadow Clone Jutsu—and later, the power of Sage Mode and Kurama—Naruto fought to defend peace and change the shinobi world. His resolve became unshakable, his compassion unbreakable.</p>
+
+      <h2>A Quote to Remember</h2>
+      <p><em>"I’m not gonna run away, I never go back on my word! That’s my nindō — my ninja way!"</em></p>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 Anime Hero Hub | Created by Andrei

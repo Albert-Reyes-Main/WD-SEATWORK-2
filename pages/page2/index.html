@@ -10,157 +10,224 @@
 
     body {
       font-family: 'Bangers', cursive;
-      background-color: #000;
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background: radial-gradient(circle, #0252ff, #003399);
+      color: #3e1f00;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    .grid-container {
-      font-family: Arial, sans-serif;
+    .navbar {
+      background-color: #1e272e;
       display: flex;
       align-items: center;
-      background-color: #1c1c1c;
       padding: 10px 20px;
       gap: 15px;
       position: sticky;
       top: 0;
       z-index: 100;
-      flex-wrap: wrap;
     }
 
-    .logo img {
+    .navbar img {
       height: 60px;
     }
 
-    .grid-item {
-      padding: 10px 15px;
+    .nav-link {
       color: white;
-      background-color: #333;
-      border: 1px solid #444;
       text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    .grid-item:hover {
-      background-color: #ff4757;
-    }
-
-    header {
       font-family: Arial, sans-serif;
-      background-color: #d62828;
-      color: #fdf0d5;
-      padding: 20px;
+      font-weight: bold;
+      margin-right: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ff9f43;
+    }
+
+    .wave-container {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 200%;
+      background: url('https://i.ibb.co/2Kf4j9G/wave-top.png') repeat-x;
+      background-size: contain;
+      animation: waveAnimation 10s linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .wave2 {
+      top: 10px;
+      opacity: 0.5;
+      animation: waveAnimationReverse 15s linear infinite;
+    }
+
+    .bottom-wave {
+      transform: rotate(180deg);
+      margin-top: 40px;
+    }
+
+    @keyframes waveAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes waveAnimationReverse {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(50%); }
+    }
+
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 10vw;
+      background-image: url('your-parchment-background.jpg'); /* Replace with pirate map texture */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .journal-title {
       text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+      font-size: 3.2rem;
+      color: #b33939;
+      text-shadow: 1px 1px #fff2e6;
     }
 
-    section {
-      flex: 1;
-      max-width: 900px;
-      margin: 40px auto;
-      background: #f7c479;
-      padding: 40px;
-      border: 6px solid #000;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      line-height: 1.8;
+    .entry {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgba(255, 255, 240, 0.95);
+      border: 3px dashed #6e2c00;
+      margin-bottom: 50px;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .entry-image {
+      flex: 1 1 300px;
+      padding: 10px;
+    }
+
+    .entry-image img {
+      width: 100%;
+      border-radius: 10px;
+      border: 4px solid #3e1f00;
+    }
+
+    .entry-text {
+      flex: 2 1 400px;
+      padding: 10px;
+    }
+
+    .entry-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #d35400;
+    }
+
+    .entry-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .final-thought {
+      background: #ffeaa7;
+      padding: 40px 20px;
+      border-top: 5px solid #e67e22;
+      border-bottom: 5px solid #e67e22;
       text-align: center;
-    }
-
-    .resume-title {
-      font-size: 8.1rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #000000;
-      letter-spacing: 40px;
-    }
-
-    .pirate-bounty {
-      font-size: 4.2rem;
-      font-weight: bold;
-      color: #6e1414;
-      margin-bottom: 25px;
-      letter-spacing: 10px;
-    }
-
-    .resume-left img {
-      display: block;
-      margin: 0 auto 25px;
-      width: 300px;
-      border: 5px solid #221f1f;
-      box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
-      background-color: #000;
-    }
-
-    .resume-details {
-      font-size: 1.1rem;
-      text-align: left;
-      background-color: #f7c479;
-      padding: 30px;
-      border: 5px solid #000;
-      margin-top: 20px;
-    }
-
-    .resume-details p {
-      margin-bottom: 12px;
-    }
-
-    .resume-details p:last-child {
-      margin-top: 20px;
-      font-style: italic;
+      font-size: 1.3rem;
     }
 
     footer {
-      background-color: #1c1c1c;
+      margin-top: auto;
+      background-color: #1e272e;
       color: #ccc;
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      .entry {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="grid-container">
-    <a href="/pages/index.html" class="logo">
-      <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
-    </a>
-    <a class="grid-item" href="/pages/index.html">Home</a>
-    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
-    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
-    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
-    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
-    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  <div class="navbar">
+    <a href="/pages/index.html"><img src="/pages/img/Truehero.png" alt="Logo" /></a>
+    <a class="nav-link" href="/pages/index.html">Home</a>
+    <a class="nav-link" href="/pages/page1/index.html">Naruto</a>
+    <a class="nav-link" href="/pages/page2/index.html">Luffy</a>
+    <a class="nav-link" href="/pages/page3/index.html">Goku</a>
+    <a class="nav-link" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="nav-link" href="/pages/page5/index.html">Levi</a>
   </div>
 
-  <header>
-    Pirate Bounty – Monkey D. Luffy
-  </header>
+  <!-- 🌊 Top Waves -->
+  <div class="wave-container">
+    <div class="wave"></div>
+    <div class="wave wave2"></div>
+  </div>
 
-  <section>
-    <div class="resume-title">WANTED</div>
-    <div class="pirate-bounty">₿ 1,500,000,000</div>
+  <div class="main-wrapper">
+    <div class="journal-title">Captain's Log: Monkey D. Luffy</div>
 
-    <div class="resume-left">
-      <img src="/pages/page2/assets/img/juubidara-vs-luffy-gear-5-v0-cwatat5hu8ye1-removebg-preview.png" alt="Luffy Picture">
+    <div class="entry">
+      <div class="entry-image">
+        <img src="/pages/page2/assets/img/juubidara-vs-luffy-gear-5-v0-cwatat5hu8ye1-removebg-preview.png" alt="Gear 5 Luffy" />
+      </div>
+      <div class="entry-text">
+        <h2>Gear 5: The Awakening</h2>
+        <p>Luffy's most iconic transformation—Gear 5—unleashes a whimsical, reality-bending power fueled by freedom and laughter. As the Sun God Nika, he dances around enemies with joy and overwhelming strength.</p>
+      </div>
     </div>
 
-    <div class="resume-details">
-      <p><strong>Name:</strong> Monkey D. Luffy</p>
-      <p><strong>Affiliation:</strong> Straw Hat Pirates (Captain)</p>
-      <p><strong>Devil Fruit:</strong> Gomu Gomu no Mi (Hito Hito no Mi, Model: Nika)</p>
-      <p><strong>Signature Techniques:</strong> Gear Second, Gear Fourth, Gear Fifth, Red Hawk, King Kong Gun</p>
-      <p><strong>Goal:</strong> To become the King of the Pirates and find the One Piece.</p>
-      <p><strong>Allies:</strong> Straw Hat Crew, Trafalgar Law, Sabo, Vivi, Yamato</p>
-      <p><strong>Known Traits:</strong> Fearless, loyal, rubber-powered, gluttonous, a natural leader.</p>
-      <p>"I’ve set myself to become the King of the Pirates… and if I die trying… then at least I tried!"</p>
+    <div class="entry">
+      <div class="entry-text">
+        <h2>The Straw Hat Legacy</h2>
+        <p>Behind every great captain is a legendary crew. From Zoro’s blades to Nami’s navigation, Sanji’s kicks to Chopper’s care—Luffy sails with a family he’d risk it all for.</p>
+      </div>
+      <div class="entry-image">
+        <img src="/pages/page2/assets/img/One-Piece-Straw-Hat-Pirates-Mysteries.avif" alt="Straw Hat Crew" />
+      </div>
     </div>
-  </section>
+
+    <div class="entry">
+      <div class="entry-image">
+        <img src="/pages/page2/assets/img/ezgif-2-2f7c7b85d6.avif" alt="Luffy Heroic" />
+      </div>
+      <div class="entry-text">
+        <h2>Why He’s a Hero</h2>
+        <p>Whether punching Celestial Dragons or rescuing kingdoms, Luffy never backs down when freedom is at stake. His heart, not just his haki, is what makes him the Pirate King the world needs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌊 Bottom Waves -->
+  <div class="wave-container bottom-wave">
+    <div class="wave"></div>
+    <div class="wave wave2"></div>
+  </div>
+
+  <div class="final-thought">
+    “If you don’t take risks, you can’t create a future.” – Monkey D. Luffy
+  </div>
 
   <footer>
     &copy; 2025 Anime Hero Hub | Created by Andrei
