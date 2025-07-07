@@ -15,7 +15,7 @@
     body {
       font-family: 'Zilla Slab', serif;
       background-color: #fdfaf2;
-      background-image: url('/pages/page4/assets/img/demon-slayer-scenery-winter-forest-trees-m2op3vr8aklb2inm.jpg');
+      background-image: url('../page4/assets/img/demon-slayer-scenery-winter-forest-trees-m2op3vr8aklb2inm.jpg');
       background-size: cover;
       background-attachment: fixed;
       color: #2e2e2e;
@@ -131,7 +131,7 @@
     /* 🔥 HINOKAMI MODE 🔥 */
     body.hinokami {
       background-color: #120202;
-      background-image: url('/pages/page4/assets/img/unnamed2.webp');
+      background-image: url('../page4/assets/img/unnamed2.webp');
       color: #f7dcdc;
     }
 
@@ -169,19 +169,19 @@
 </head>
 <body>
   <div class="navbar">
-    <img src="/pages/img/Truehero.png" alt="Logo" />
-    <a class="nav-link" href="/pages/index.html">Home</a>
-    <a class="nav-link" href="/pages/page1/index.html">Naruto</a>
-    <a class="nav-link" href="/pages/page2/index.html">Luffy</a>
-    <a class="nav-link" href="/pages/page3/index.html">Goku</a>
-    <a class="nav-link" href="/pages/page4/index.html">Tanjiro</a>
-    <a class="nav-link" href="/pages/page5/index.html">Deku</a>
+    <img src="../../index.html" alt="Logo" />
+    <a class="nav-link" href="../../index.html">Home</a>
+    <a class="nav-link" href="../page1/index.html">Naruto</a>
+    <a class="nav-link" href="../page2/index.html">Luffy</a>
+    <a class="nav-link" href="../page3/index.html">Goku</a>
+    <a class="nav-link" href="../page4/index.html">Tanjiro</a>
+    <a class="nav-link" href="../page5/index.html">Deku</a>
   </div>
 
   <header id="hero-title">Breathing of Peace – Tanjiro Kamado</header>
 
   <div class="main-content">
-    <img id="tanjiro-img" src="/pages/page4/assets/img/waterbreathing.jfif" alt="Tanjiro Peaceful">
+    <img id="tanjiro-img" src="../page4/assets/img/waterbreathing.jfif" alt="Tanjiro Peaceful">
     <div class="info" id="info-text">
       <p><strong>Breathing Style:</strong> Water Breathing</p>
       <p><strong>Mission:</strong> Heal the world, protect Nezuko, and slay demons with compassion.</p>
@@ -209,7 +209,7 @@
 
       if (isHinokami) {
         body.classList.add("hinokami");
-        img.src = "/pages/page4/assets/img/images.jfif";
+        img.src = "../page4/assets/img/images.jfif";
         title.textContent = "Sun Breathing Awakened – Hinokami Tanjiro";
         info.innerHTML = `
           <p><strong>Breathing Style:</strong> Hinokami Kagura (Sun Breathing)</p>
@@ -220,7 +220,7 @@
         btn.textContent = "Return to Calm";
       } else {
         body.classList.remove("hinokami");
-        img.src = "/pages/page4/assets/img/waterbreathing.jfif";
+        img.src = "../page4/assets/img/waterbreathing.jfif";
         title.textContent = "Breathing of Peace – Tanjiro Kamado";
         info.innerHTML = `
           <p><strong>Breathing Style:</strong> Water Breathing</p>
