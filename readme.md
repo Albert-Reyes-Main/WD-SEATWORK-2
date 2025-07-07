@@ -1,122 +1,155 @@
-<a name="readme-top">
+# WD-SEATWORK-2
 
-<br/>
+![Anime Hub Logo](./assets/img/Truehero.png)
 
-<br />
-<div align="center">
-  <a href="https://github.com/zyx-0314/">
-  <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
-  </a>
-<!-- TODO: Change itle to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
-</div>
-<!-- TODO: Make a short description -->
-<div align="center">
-  Short Description. (Optional)
-</div>
+This project is a multi-page **Anime Hero Hub** website showcasing five anime characters using unique layouts and themes. It is built using core web technologies: **HTML, CSS, and JavaScript**.
 
-<br />
-
-<!-- TODO: Change the zyx-0314 into your github username  -->
-<!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
-
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+🔗 **Live Site:** [Anime Hero Hub on GitHub Pages](https://albert-reyes-main.github.io/WD-SEATWORK-2/)
 
 ---
 
-<br />
-<br />
+## 📁 Folder Structure
 
-<!-- TODO: If you want to add more layers for your readme -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#overview">Overview</a>
-      <ol>
-        <li>
-          <a href="#key-components">Key Components</a>
-        </li>
-        <li>
-          <a href="#technology">Technology</a>
-        </li>
-      </ol>
-    </li>
-    <li>
-      <a href="#rule,-practices-and-principles">Rules, Practices and Principles</a>
-    </li>
-    <li>
-      <a href="#resources">Resources</a>
-    </li>
-  </ol>
-</details>
+
+WD-SEATWORK-2-1/
+│
+├── .github/
+│   └── workflows/
+│       └── static.yml
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── img/
+│   │   ├── thumb-1920-1061011.jpg
+│   │   └── Truehero.png
+│   └── js/
+│       └── script.js
+│
+├── pages/
+│   ├── page1/
+│   │   ├── assets/
+│   │   │   ├── css/
+│   │   │   │   └── style.css
+│   │   │   ├── img/
+│   │   │   │   ├── anime-naruto-hokage-white-cloak-vcimzp5zlxao2870.jpg
+│   │   │   │   ├── aruto-modo-kurama-png-naruto-hokage-bijuu-mode-11562875018j0lvwkfwnn-removebg-preview.png
+│   │   │   │   ├── hokage-writing.jpg
+│   │   │   │   └── village.png
+│   │   │   └── js/
+│   │   │       └── scripts.js
+│   │   └── index.html
+│
+│   ├── page2/
+│   │   ├── assets/
+│   │   │   ├── css/
+│   │   │   │   └── style.css
+│   │   │   ├── img/
+│   │   │   │   ├── chopper.png
+│   │   │   │   ├── ezgif-2-2f7c7b85d6.avif
+│   │   │   │   ├── juubidara-vs-luffy-gear-5-v0-cwatat5hu8ye1-removebg-preview.png
+│   │   │   │   ├── mauricio-pb-img-20210402-193744-202-removebg-preview.png
+│   │   │   │   ├── nami.png
+│   │   │   │   ├── One-Piece-Straw-Hat-Pirates-Mysteries.avif
+│   │   │   │   ├── parchment-background-wcqupoh75y7i61br.jpg
+│   │   │   │   ├── sanji.png
+│   │   │   │   ├── Strawhatflag.jpg
+│   │   │   │   ├── wave.webp
+│   │   │   │   └── zoro.png
+│   │   │   └── js/
+│   │   │       └── scripts.js
+│   │   └── index.html
+│
+│   ├── page3/
+│   │   ├── assets/
+│   │   │   ├── css/
+│   │   │   │   └── style.css
+│   │   │   ├── img/
+│   │   │   │   ├── goku-removebg-preview.png
+│   │   │   │   ├── kidgoku.png
+│   │   │   │   ├── outer-space-planets-earth-1366x768-anime-death-note-hd-art-wallpaper-thumb.jpg
+│   │   │   │   ├── saiyantimeline.png
+│   │   │   │   ├── SSR.png
+│   │   │   │   ├── ultraprofile.png
+│   │   │   │   └── ultratimeline.png
+│   │   │   └── js/
+│   │   │       └── scripts.js
+│   │   └── index.html
+│
+│   ├── page4/
+│   │   ├── assets/
+│   │   │   ├── css/
+│   │   │   │   └── style.css
+│   │   │   ├── img/
+│   │   │   │   ├── demon-slayer-scenery-winter-forest-trees-m2op3vr8aklb2inm.jpg
+│   │   │   │   ├── images.jfif
+│   │   │   │   ├── unnamed2.webp
+│   │   │   │   └── waterbreathing.jfif
+│   │   │   └── js/
+│   │   │       └── scripts.js
+│   │   └── index.html
+│
+│   └── page5/
+│       ├── assets/
+│       │   ├── css/
+│       │   │   └── style.css
+│       │   ├── img/
+│       │   │   ├── download-removebg-preview (2).png
+│       │   │   ├── download-removebg-preview (7).png
+│       │   │   └── U.A._Main_Building.webp
+│       │   └── js/
+│       │       └── scripts.js
+│       └── index.html
+│
+├── index.html
+├── LICENSE
+└── README.md
+
 
 ---
 
-## Overview
+## 💡 Key Components
 
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
+- **Home Page (`index.html`)**: Introduction to the Anime Hero Hub.
+- **Character Pages (`page1` to `page5`)**:
+  - Each page is dedicated to one anime character with a custom theme and layout.
+  - Character highlights include Naruto, Luffy, Goku, Tanjiro, and Deku.
+- **Assets Folder**:
+  - Contains global styles (`style.css`), reusable images, and scripts.
+- **GitHub Actions (`static.yml`)**:
+  - Enables automatic deployment of the site via GitHub Pages.
 
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+---
 
-### Key Components
-<!-- TODO: List of Key Components -->
-<!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+## 🛠️ Technologies Used
 
-### Technology
-<!-- TODO: List of Technology Used -->
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+| Technology     | Purpose                          |
+|----------------|----------------------------------|
+| HTML5          | Markup structure of the pages    |
+| CSS3           | Styling and layout designs       |
+| JavaScript     | Interactivity and animations     |
+| Git & GitHub   | Version control and deployment   |
+| GitHub Pages   | Hosting the live website         |
+| GitHub Actions | CI/CD Workflow for deployment    |
+| Google Fonts   | Typography customization         |
 
-## Rules, Practices and Principles
-1. Always use `WD-` in the front of the Title of the Project for the Subject followed by your custom naming.
-2. Do not rename any .html files; always use `index.html` as the filename.
-3. Place Files in their respective folders.
-4. All file naming are in camel case.
-   - Camel case is naming format where there is no white space in separation of each words, the first word is in all lower case while the succeding words first letter are in upper followed by lower cased letters.
-   - ex.: buttonAnimatedStyle.css
-5. Use only `External CSS`.
-6. Renaming of Pages folder names are a must, and relates to what it is doing or data it holding.
-7. File Structure to follow below.
+---
 
-```
-WD-ProjectName
-└─ assets
-|   └─ css
-|   |   └─ style.css
-|   └─ img
-|   |   └─ fileWith.jpeg/.jpg/.webp/.png
-|   └─ js
-|       └─ script.js
-└─ pages
-|  └─ pageName
-|     └─ assets
-|     |  └─ css
-|     |  |  └─ style.css
-|     |  └─ img
-|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
-|     |  └─ js
-|     |     └─ script.js
-|     └─ index.html
-└─ index.html
-└─ readme.md
-```
+## 🚀 Deployment
 
-## Resources
+The site is deployed using **GitHub Pages** through a GitHub Actions workflow. Any changes pushed to the repository are automatically published to the live site.
 
-<!-- TODO: Add References -->
-| Title | Purpose | Link |
-|-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+---
+
+## 📸 Screenshots
+
+You may include screenshots here (optional):
+
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+resources
