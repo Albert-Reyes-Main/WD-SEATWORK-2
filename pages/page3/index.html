@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Son Goku</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Courier New', monospace;
@@ -18,100 +22,200 @@
       min-height: 100vh;
     }
 
-    .grid-container {
-      font-family: Arial, sans-serif;
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      background-color: #1c1c1c;
       padding: 10px 20px;
-      gap: 15px;
       position: sticky;
       top: 0;
-      z-index: 100;
-    }
-
-    .logo img {
-      height: 60px;
-    }
-
-    .grid-item {
-      padding: 10px 15px;
-      color: white;
-      background-color: #333;
-      border: 1px solid #444;
-      text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    .grid-item:hover {
-      background-color: #ff4757;
-    }
-
-    header {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #0ff;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px #0ff;
-      border-bottom: 2px solid #0ff;
-    }
-
-    section {
-      flex: 1;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px;
-      background: #111;
-      border: 2px solid #0ff;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
-    }
-
-    .scanner-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .scanner-image {
+      z-index: 1000;
+      max-width: 1200px;
+      margin: auto;
       width: 100%;
-      border: 2px solid #0ff;
-      padding: 10px;
-      background: radial-gradient(circle, #0ff2, #000);
-      box-shadow: 0 0 10px #0ff;
+      border-radius: 0 0 10px 10px;
     }
 
-    .scanner-data h2 {
+    .navbar img {
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-link:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 60px 20px;
+      gap: 40px;
+    }
+
+    .goku-img-wrap {
+      flex: 1 1 300px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .goku-img-transform {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .goku-img-transform img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border: 3px solid #0ff;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #0ff;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .goku-img-transform img.ultra {
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .goku-img-transform:hover img.base {
+      opacity: 0;
+    }
+
+    .goku-img-transform:hover img.ultra {
+      opacity: 1;
+      animation: aura 3s ease-in-out infinite;
+    }
+
+    .card {
+      flex: 2 1 400px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid #00ffee;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffee88;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      color: #00ffee;
+      text-shadow: 0 0 10px #0ff;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: pulseTitle 2s infinite;
+    }
+
+    @keyframes pulseTitle {
+      0%, 100% {
+        text-shadow: 0 0 8px #0ff, 0 0 12px #00ffee;
+      }
+      50% {
+        text-shadow: 0 0 20px #0ff, 0 0 25px #00ffee;
+      }
+    }
+
+    .card-content h3 {
       font-size: 1.8rem;
-      color: #0ff;
+      border-bottom: 1px dashed #00ffee;
       margin-bottom: 15px;
-      border-bottom: 1px dashed #0ff;
       padding-bottom: 5px;
     }
 
-    .scanner-data ul {
-      list-style: none;
-      padding: 0;
+    .card-content p {
       line-height: 1.8;
+      font-size: 1.05rem;
     }
 
-    .scanner-data li::before {
-      content: "▌";
-      color: #0ff;
-      margin-right: 8px;
+    @keyframes aura {
+      0%, 100% {
+        box-shadow: 0 0 20px #00ffee, 0 0 40px #00ffee88;
+      }
+      50% {
+        box-shadow: 0 0 40px #00ffee, 0 0 80px #00ffeeaa;
+      }
     }
 
-    .quote {
-      margin-top: 25px;
-      font-style: italic;
-      color: #00ccff;
+    .timeline {
       text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-top: 2px dashed #0ff;
+      margin-top: 40px;
+    }
+
+    .timeline h2 {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      color: #00ffee;
+      text-shadow: 0 0 5px rgb(0, 0, 0);
+    }
+
+    .timeline-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      background-color: #111;
+      color: #0ff;
+      border: 1px solid #0ff;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background-color 0.3s;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+      background-color: #0ff;
+      color: #111;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content img {
+      width: 250px;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ffee99;
+      margin-bottom: 15px;
+    }
+
+    .tab-content p {
+      font-size: 1rem;
+      color: #0ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     footer {
@@ -121,51 +225,105 @@
       padding: 15px;
       font-size: 0.9rem;
       border-top: 1px solid #0ff;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="grid-container">
-    <a href="/pages/index.html" class="logo">
-      <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
-    </a>
-    <a class="grid-item" href="/pages/index.html">Home</a>
-    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
-    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
-    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
-    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
-    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  <div class="navbar">
+    <img src="/pages/img/Truehero.png" alt="Logo" />
+    <a class="nav-link" href="/pages/index.html">Home</a>
+    <a class="nav-link" href="/pages/page1/index.html">Naruto</a>
+    <a class="nav-link" href="/pages/page2/index.html">Luffy</a>
+    <a class="nav-link" href="/pages/page3/index.html">Goku</a>
+    <a class="nav-link" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="nav-link" href="/pages/page5/index.html">Deku</a>
   </div>
 
-  <header>
-    POWER SCAN – SON GOKU
-  </header>
-
-  <section>
-    <div class="scanner-grid">
-      <div>
-        <img class="scanner-image" src="/pages/page3/assets/img/goku-removebg-preview.png" alt="Goku Power Scan">
-      </div>
-      <div class="scanner-data">
-        <h2>Combat Profile</h2>
-        <ul>
-          <li><strong>Name:</strong> Son Goku (Kakarot)</li>
-          <li><strong>Race:</strong> Saiyan</li>
-          <li><strong>Power Level:</strong> 9,999+</li>
-          <li><strong>Forms:</strong> Super Saiyan | Blue | Ultra Instinct</li>
-          <li><strong>Techniques:</strong> Kamehameha, Spirit Bomb, Instant Transmission</li>
-          <li><strong>Mentors:</strong> Master Roshi, King Kai, Whis</li>
-        </ul>
+  <div class="container">
+    <div class="goku-img-wrap">
+      <div class="goku-img-transform">
+        <img class="base" src="/pages/page3/assets/img/goku-removebg-preview.png" alt="Son Goku Base Form" />
+        <img class="ultra" src="/pages/page3/assets/img/ultraprofile.png" />
       </div>
     </div>
 
-    <p class="quote">"I am the hope of the universe... I am the answer to all living things that cry out for peace."</p>
+    <div class="card">
+      <h2 class="hero-title">GALACTIC WARRIOR: SON GOKU</h2>
+      <div class="card-content">
+        <h3>Battle Essence</h3>
+        <p>
+          <strong>Name:</strong> Son Goku (Kakarot)<br>
+          <strong>Race:</strong> Saiyan<br>
+          <strong>Forms:</strong> SSJ | SSJ Blue | Ultra Instinct<br>
+          <strong>Power Level:</strong> 9,999+ (Off the charts)<br>
+          <strong>Signature Moves:</strong> Kamehameha, Instant Transmission, Spirit Bomb<br>
+          <strong>Mentors:</strong> Master Roshi, King Kai, Whis<br>
+          <strong>Code:</strong> “Train. Break Limits. Repeat.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="timeline">
+    <h2>Goku Through the Ages</h2>
+    <div class="timeline-tabs">
+      <button class="tab-button active" data-tab="kid">Kid Goku</button>
+      <button class="tab-button" data-tab="ssj">Super Saiyan</button>
+      <button class="tab-button" data-tab="blue">SSJ Blue</button>
+      <button class="tab-button" data-tab="ultra">Ultra Instinct</button>
+    </div>
+
+    <div class="tab-content active" id="kid">
+      <img src="/pages/page3/assets/img/kidgoku.png" alt="Kid Goku" />
+      <p>Kid Goku<br><small>Original Dragon Ball</small></p>
+    </div>
+    <div class="tab-content" id="ssj">
+      <img src="/pages/page3/assets/img/saiyantimeline.png" alt="Super Saiyan" />
+      <p>Super Saiyan<br><small>Namek Saga</small></p>
+    </div>
+    <div class="tab-content" id="blue">
+      <img src="/pages/page3/assets/img/SSR.png" alt="SSJ Blue" />
+      <p>SSJ Blue<br><small>Dragon Ball Super</small></p>
+    </div>
+    <div class="tab-content" id="ultra">
+      <img src="/pages/page3/assets/img/ultratimeline.png" alt="Ultra Instinct" />
+      <p>Ultra Instinct<br><small>Tournament of Power</small></p>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Anime Hero Hub | Created by Andrei
   </footer>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        tabContents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === target) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

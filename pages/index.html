@@ -18,36 +18,35 @@
       flex-direction: column;
     }
 
-    .grid-container {
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      background-color: #0d1b2a;
       padding: 10px 20px;
-      gap: 10px;
       position: sticky;
       top: 0;
-      z-index: 100;
-      font-family: Arial, sans-serif;
+      z-index: 1000;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+      border-radius: 0 0 10px 10px;
     }
 
-    .logo img {
+    .navbar img {
       height: 60px;
-      margin-right: auto;
+      margin-right: 20px;
     }
 
-    .grid-item {
-      padding: 10px 15px;
-      color: white;
-      background-color: #1b263b;
-      border: 1px solid #415a77;
+    .nav-link {
+      color: #fff;
       text-decoration: none;
+      margin-right: 20px;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    .grid-item:hover {
-      background-color: #00ff88;
-      color: #000;
+    .nav-link:hover {
+      color: #ffcc00;
     }
 
     header {
@@ -119,18 +118,14 @@
 </head>
 <body>
 
-  <div class="grid-container">
-    <div class="logo">
-      <a href="/pages/index.html">
-        <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
-      </a>
-    </div>
-    <a class="grid-item" href="/pages/index.html">Home</a>
-    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
-    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
-    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
-    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
-    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  <div class="navbar">
+    <img src="/pages/img/Truehero.png" alt="Logo" />
+    <a class="nav-link" href="/pages/index.html">Home</a>
+    <a class="nav-link" href="/pages/page1/index.html">Naruto</a>
+    <a class="nav-link" href="/pages/page2/index.html">Luffy</a>
+    <a class="nav-link" href="/pages/page3/index.html">Goku</a>
+    <a class="nav-link" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="nav-link" href="/pages/page5/index.html">Deku</a>
   </div>
 
   <header>

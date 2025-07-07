@@ -18,31 +18,35 @@
     }
 
     .navbar {
-      background-color: #1e272e;
+      background-color: rgba(0, 0, 0, 0.85);
       display: flex;
       align-items: center;
       padding: 10px 20px;
-      gap: 15px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+      border-radius: 0 0 10px 10px;
     }
 
     .navbar img {
       height: 60px;
+      margin-right: 20px;
     }
 
     .nav-link {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
       margin-right: 20px;
+      font-weight: bold;
       transition: color 0.3s ease;
+      font-family: Arial, sans-serif;
     }
 
     .nav-link:hover {
-      color: #ff9f43;
+      color: #ffcc00;
     }
 
     .wave-container {
@@ -59,22 +63,24 @@
       left: 0;
       height: 100px;
       width: 200%;
-      background: url('https://i.ibb.co/2Kf4j9G/wave-top.png') repeat-x;
+      background: url('/pages/page2/assets/img/wave.webp') repeat-x;
       background-size: contain;
       animation: waveAnimation 10s linear infinite;
       opacity: 0.8;
       z-index: 1;
     }
 
-    .wave2 {
-      top: 10px;
-      opacity: 0.5;
-      animation: waveAnimationReverse 15s linear infinite;
+    .bottom-wave .wave {
+      transform: scaleY(-1);
     }
 
-    .bottom-wave {
-      transform: rotate(180deg);
-      margin-top: 40px;
+    .sunny-ship {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100px;
+      animation: driftShip 20s linear infinite, floatShip 3s ease-in-out infinite;
+      z-index: 2;
     }
 
     @keyframes waveAnimation {
@@ -82,16 +88,21 @@
       100% { transform: translateX(-50%); }
     }
 
-    @keyframes waveAnimationReverse {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(50%); }
+    @keyframes driftShip {
+      0% { left: 100%; }
+      100% { left: 120px; }
+    }
+
+    @keyframes floatShip {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-7px); }
     }
 
     .main-wrapper {
       display: flex;
       flex-direction: column;
       padding: 40px 10vw;
-      background-image: url('your-parchment-background.jpg'); /* Replace with pirate map texture */
+      background-image: url('/pages/page2/assets/img/parchment-background-wcqupoh75y7i61br.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -102,6 +113,7 @@
       font-size: 3.2rem;
       color: #b33939;
       text-shadow: 1px 1px #fff2e6;
+      letter-spacing: 10px;
     }
 
     .entry {
@@ -170,19 +182,18 @@
 <body>
 
   <div class="navbar">
-    <a href="/pages/index.html"><img src="/pages/img/Truehero.png" alt="Logo" /></a>
+    <img src="/pages/img/Truehero.png" alt="Logo" />
     <a class="nav-link" href="/pages/index.html">Home</a>
     <a class="nav-link" href="/pages/page1/index.html">Naruto</a>
     <a class="nav-link" href="/pages/page2/index.html">Luffy</a>
     <a class="nav-link" href="/pages/page3/index.html">Goku</a>
     <a class="nav-link" href="/pages/page4/index.html">Tanjiro</a>
-    <a class="nav-link" href="/pages/page5/index.html">Levi</a>
+    <a class="nav-link" href="/pages/page5/index.html">Deku</a>
   </div>
 
-  <!-- 🌊 Top Waves -->
   <div class="wave-container">
     <div class="wave"></div>
-    <div class="wave wave2"></div>
+    <img src="/pages/page2/assets/img/mauricio-pb-img-20210402-193744-202-removebg-preview.png" alt="Thousand Sunny" class="sunny-ship" />
   </div>
 
   <div class="main-wrapper">
@@ -219,10 +230,8 @@
     </div>
   </div>
 
-  <!-- 🌊 Bottom Waves -->
   <div class="wave-container bottom-wave">
     <div class="wave"></div>
-    <div class="wave wave2"></div>
   </div>
 
   <div class="final-thought">
