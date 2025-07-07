@@ -9,7 +9,7 @@ This project is a multi-page **Anime Hero Hub** website showcasing five anime ch
 ---
 
 ## 📁 Folder Structure
-
+```plaintext
 
 WD-SEATWORK-2-1/
 │
