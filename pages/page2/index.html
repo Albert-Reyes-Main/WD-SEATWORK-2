@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monkey D. Luffy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Bangers', cursive;
+      background-color: #000;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .grid-container {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      background-color: #1c1c1c;
+      padding: 10px 20px;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .grid-item {
+      padding: 10px 15px;
+      color: white;
+      background-color: #333;
+      border: 1px solid #444;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .grid-item:hover {
+      background-color: #ff4757;
+    }
+
+    header {
+      font-family: Arial, sans-serif;
+      background-color: #d62828;
+      color: #fdf0d5;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    section {
+      flex: 1;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #f7c479;
+      padding: 40px;
+      border: 6px solid #000;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .resume-title {
+      font-size: 8.1rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #000000;
+      letter-spacing: 40px;
+    }
+
+    .pirate-bounty {
+      font-size: 4.2rem;
+      font-weight: bold;
+      color: #6e1414;
+      margin-bottom: 25px;
+      letter-spacing: 10px;
+    }
+
+    .resume-left img {
+      display: block;
+      margin: 0 auto 25px;
+      width: 300px;
+      border: 5px solid #221f1f;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+      background-color: #000;
+    }
+
+    .resume-details {
+      font-size: 1.1rem;
+      text-align: left;
+      background-color: #f7c479;
+      padding: 30px;
+      border: 5px solid #000;
+      margin-top: 20px;
+    }
+
+    .resume-details p {
+      margin-bottom: 12px;
+    }
+
+    .resume-details p:last-child {
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <a href="/pages/index.html" class="logo">
+      <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
+    </a>
+    <a class="grid-item" href="/pages/index.html">Home</a>
+    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
+    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
+    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
+    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  </div>
+
+  <header>
+    Pirate Bounty – Monkey D. Luffy
+  </header>
+
+  <section>
+    <div class="resume-title">WANTED</div>
+    <div class="pirate-bounty">₿ 1,500,000,000</div>
+
+    <div class="resume-left">
+      <img src="/pages/page2/assets/img/juubidara-vs-luffy-gear-5-v0-cwatat5hu8ye1-removebg-preview.png" alt="Luffy Picture">
+    </div>
+
+    <div class="resume-details">
+      <p><strong>Name:</strong> Monkey D. Luffy</p>
+      <p><strong>Affiliation:</strong> Straw Hat Pirates (Captain)</p>
+      <p><strong>Devil Fruit:</strong> Gomu Gomu no Mi (Hito Hito no Mi, Model: Nika)</p>
+      <p><strong>Signature Techniques:</strong> Gear Second, Gear Fourth, Gear Fifth, Red Hawk, King Kong Gun</p>
+      <p><strong>Goal:</strong> To become the King of the Pirates and find the One Piece.</p>
+      <p><strong>Allies:</strong> Straw Hat Crew, Trafalgar Law, Sabo, Vivi, Yamato</p>
+      <p><strong>Known Traits:</strong> Fearless, loyal, rubber-powered, gluttonous, a natural leader.</p>
+      <p>"I’ve set myself to become the King of the Pirates… and if I die trying… then at least I tried!"</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Anime Hero Hub | Created by Andrei
+  </footer>
+
+</body>
+</html>

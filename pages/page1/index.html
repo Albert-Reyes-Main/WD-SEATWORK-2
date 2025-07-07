@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naruto Uzumaki</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: url('/pages/page1/assets/img/Konohagakure.avif') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-container {
+      display: flex;
+      align-items: center;
+      background-color: #1c1c1c;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 0;
+    }
+
+    .grid-item {
+      padding: 10px 15px;
+      color: white;
+      background-color: #333;
+      border: 1px solid #444;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .grid-item:hover {
+      background-color: #ff4757;
+    }
+
+    header {
+      font-family: Arial, sans-serif;
+      background-color: #f38c02;
+      color: #0b0b0b;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    section {
+      flex: 1;
+      max-width: 850px;
+      margin: 50px auto;
+      background: url('https://cdn.pixabay.com/photo/2014/12/21/23/28/parchment-575231_1280.png') center no-repeat;
+      background-size: contain;
+      background-color: #fff8e1;
+      padding: 60px 40px;
+      border: 6px solid #d29e54;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #bf3f0d;
+    }
+
+    .resume-image {
+      display: block;
+      margin: 0 auto 30px;
+      width: 280px;
+      height: auto;
+      border: 5px solid #000;
+      border-radius: 6px;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+      background-color: white;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    section p strong {
+      color: #b45309;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-top: 25px;
+      font-size: 1.1rem;
+      color: #d2691e;
+      border-left: 4px solid #f38c02;
+      padding-left: 15px;
+    }
+
+    footer {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <a href="/pages/index.html" class="logo">
+      <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
+    </a>
+    <a class="grid-item" href="/pages/index.html">Home</a>
+    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
+    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
+    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
+    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  </div>
+
+  <header>
+    Chunin Application – Naruto Uzumaki
+  </header>
+
+  <section>
+    <h2>Ninja Resume: Naruto Uzumaki</h2>
+    <img src="/pages/page1/assets/img/narutoclown.png" alt="Naruto Uzumaki" class="resume-image">
+    <p><strong>Name:</strong> Naruto Uzumaki</p>
+    <p><strong>Rank:</strong> Genin (Later Hokage)</p>
+    <p><strong>Affiliation:</strong> Konohagakure</p>
+    <p><strong>Skills:</strong> Rasengan, Shadow Clone Jutsu, Sage Mode, Kurama Chakra Mode</p>
+    <p class="quote">"I'm not gonna run away, I never go back on my word! That's my nindō – my ninja way!"</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Anime Hero Hub | Created by Andrei
+  </footer>
+
+</body>
+</html>

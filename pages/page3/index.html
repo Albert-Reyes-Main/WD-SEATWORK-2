@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Son Goku</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: url('/pages/page3/assets/img/outer-space-planets-earth-1366x768-anime-death-note-hd-art-wallpaper-thumb.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #00ffcc;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .grid-container {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #1c1c1c;
+      padding: 10px 20px;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .grid-item {
+      padding: 10px 15px;
+      color: white;
+      background-color: #333;
+      border: 1px solid #444;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .grid-item:hover {
+      background-color: #ff4757;
+    }
+
+    header {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #0ff;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #0ff;
+      border-bottom: 2px solid #0ff;
+    }
+
+    section {
+      flex: 1;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #111;
+      border: 2px solid #0ff;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+
+    .scanner-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .scanner-image {
+      width: 100%;
+      border: 2px solid #0ff;
+      padding: 10px;
+      background: radial-gradient(circle, #0ff2, #000);
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .scanner-data h2 {
+      font-size: 1.8rem;
+      color: #0ff;
+      margin-bottom: 15px;
+      border-bottom: 1px dashed #0ff;
+      padding-bottom: 5px;
+    }
+
+    .scanner-data ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .scanner-data li::before {
+      content: "▌";
+      color: #0ff;
+      margin-right: 8px;
+    }
+
+    .quote {
+      margin-top: 25px;
+      font-style: italic;
+      color: #00ccff;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #0ff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      border-top: 1px solid #0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <a href="/pages/index.html" class="logo">
+      <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
+    </a>
+    <a class="grid-item" href="/pages/index.html">Home</a>
+    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
+    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
+    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
+    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  </div>
+
+  <header>
+    POWER SCAN – SON GOKU
+  </header>
+
+  <section>
+    <div class="scanner-grid">
+      <div>
+        <img class="scanner-image" src="/pages/page3/assets/img/goku-removebg-preview.png" alt="Goku Power Scan">
+      </div>
+      <div class="scanner-data">
+        <h2>Combat Profile</h2>
+        <ul>
+          <li><strong>Name:</strong> Son Goku (Kakarot)</li>
+          <li><strong>Race:</strong> Saiyan</li>
+          <li><strong>Power Level:</strong> 9,999+</li>
+          <li><strong>Forms:</strong> Super Saiyan | Blue | Ultra Instinct</li>
+          <li><strong>Techniques:</strong> Kamehameha, Spirit Bomb, Instant Transmission</li>
+          <li><strong>Mentors:</strong> Master Roshi, King Kai, Whis</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="quote">"I am the hope of the universe... I am the answer to all living things that cry out for peace."</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Anime Hero Hub | Created by Andrei
+  </footer>
+
+</body>
+</html>

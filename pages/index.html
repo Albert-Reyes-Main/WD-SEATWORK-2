@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anime Hero Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto Slab', serif;
+      background: url('/pages/img/thumb-1920-1061011.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0f7fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #0d1b2a;
+      padding: 10px 20px;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: auto;
+    }
+
+    .grid-item {
+      padding: 10px 15px;
+      color: white;
+      background-color: #1b263b;
+      border: 1px solid #415a77;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .grid-item:hover {
+      background-color: #00ff88;
+      color: #000;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ff88;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #e0f7fa;
+    }
+
+    .center-logo {
+      text-align: center;
+      margin: 0%;
+    }
+
+    .center-logo img {
+      max-width: 500px;
+      height: auto;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .intro-card {
+      background-color: rgba(13, 27, 42, 0.92);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .intro-card h2 {
+      font-size: 2rem;
+      color: #00ff88;
+      margin-bottom: 20px;
+    }
+
+    .intro-card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #cce3e8;
+    }
+
+    footer {
+      background-color: #0d1b2a;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="logo">
+      <a href="/pages/index.html">
+        <img src="/pages/img/Truehero.png" alt="Anime Hero Hub Logo" />
+      </a>
+    </div>
+    <a class="grid-item" href="/pages/index.html">Home</a>
+    <a class="grid-item" href="/pages/page1/index.html">Naruto</a>
+    <a class="grid-item" href="/pages/page2/index.html">Luffy</a>
+    <a class="grid-item" href="/pages/page3/index.html">Goku</a>
+    <a class="grid-item" href="/pages/page4/index.html">Tanjiro</a>
+    <a class="grid-item" href="/pages/page5/index.html">Deku</a>
+  </div>
+
+  <header>
+    <h1>Welcome to Anime Hero Hub</h1>
+    <p>Meet some of the powerful anime heroes in their base form!</p>
+  </header>
+
+  <div class="center-logo">
+    <img src="/pages/img/Truehero.png" alt="Center Logo" />
+  </div>
+
+  <main>
+    <div class="intro-card">
+      <h2>Meet the Heroes</h2>
+      <p>From the Hokage's path to the Pirate King's dream... from Saiyan warriors to demon slayers to aspiring Pro Heroes — this hub brings them all together. Click a name above to explore each hero’s official profile, powers, and legacy.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Anime Hero Hub | Created by Andrei
+  </footer>
+
+</body>
+</html>
