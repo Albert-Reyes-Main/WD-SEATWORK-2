@@ -24,7 +24,7 @@ body {
   top: 0;
   z-index: 1000;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   border-radius: 0 0 10px 10px;
 }
