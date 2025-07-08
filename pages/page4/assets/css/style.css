@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Zilla Slab', serif;
+  background-color: #fdfaf2;
+  background-image: url('../img/demon-slayer-scenery-winter-forest-trees-m2op3vr8aklb2inm.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #2e2e2e;
+  transition: all 0.6s ease;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.nav-link:hover {
+  color: #ff6b6b;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 40px 20px 20px;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1d3b2a;
+  font-weight: bold;
+  border-bottom: 4px dashed #1d3b2a;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-left: 6px solid #1d3b2a;
+  border-right: 6px solid #1d3b2a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.main-content img {
+  max-width: 280px;
+  border: 5px solid #1d3b2a;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.quote {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fbeed5;
+  color: #4e2a1e;
+  border-left: 5px solid #1d3b2a;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.toggle-btn {
+  margin: 30px auto;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #2e5339;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #ff4747;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* 🔥 HINOKAMI MODE 🔥 */
+body.hinokami {
+  background-color: #120202;
+  background-image: url('../img/unnamed2.webp');
+  color: #f7dcdc;
+}
+
+body.hinokami header {
+  background-color: #400000e6;
+  color: #ffb3b3;
+  border-bottom: 4px double #ff4747;
+}
+
+body.hinokami .main-content {
+  background-color: rgba(40, 0, 0, 0.85);
+  border-left: 6px solid #ff4747;
+  border-right: 6px solid #ff4747;
+}
+
+body.hinokami .quote {
+  background-color: #4d0000;
+  color: #ffb3b3;
+  border-left-color: #ff4747;
+}
+
+body.hinokami .toggle-btn {
+  background-color: #ff4747;
+}
+
+body.hinokami .toggle-btn:hover {
+  background-color: #770000;
+}
+
+body.hinokami .main-content img {
+  border-color: #ff4747;
+  box-shadow: 0 0 25px #ff4747;
+}

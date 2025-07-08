@@ -1,5 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+/* ---------------- Reset ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* ---------------- Body ---------------- */
 body {
   font-family: 'Roboto Slab', serif;
+  background: url('../img/thumb-1920-1061011.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+/* ---------------- Header ---------------- */
+header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #e0f7fa;
+}
+
+/* ---------------- Logo ---------------- */
+.center-logo {
+  text-align: center;
+  margin: 0%;
+}
+
+.center-logo img {
+  max-width: 500px;
+  height: auto;
+}
+
+/* ---------------- Main Content ---------------- */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.intro-card {
+  background-color: rgba(13, 27, 42, 0.92);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  max-width: 800px;
+  text-align: center;
+}
+
+.intro-card h2 {
+  font-size: 2rem;
+  color: #00ff88;
+  margin-bottom: 20px;
+}
+
+.intro-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cce3e8;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  background-color: #0d1b2a;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
 }
